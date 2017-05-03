@@ -1,4 +1,30 @@
-#ifndef TEMPLATE_FUN_TFUN_H
-#define TEMPLATE_FUN_TFUN_H
+#pragma once
 
-#endif //TEMPLATE_FUN_TFUN_H
+#include <sstream>
+#include <string>
+
+template<int ...>
+struct show;
+
+template<int X>
+struct show<X>
+{
+  static std::string string() {
+    std::stringstream stream;
+    stream << X;
+    return stream.str();
+  }
+};
+
+template<int X, int ... Xs>
+struct show<X, Xs ...>
+{
+  static std::string string() {
+    std::stringstream stream;
+    stream << X << " " << show<Xs ...>::string();
+    return stream.str();
+  }
+};
+
+template<int ...>
+struct quicksort;
