@@ -1,0 +1,4 @@
+#ifndef TEMPLATE_FUN_TFUN_H
+#define TEMPLATE_FUN_TFUN_H
+
+#endif //TEMPLATE_FUN_TFUN_H
