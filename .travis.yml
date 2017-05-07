@@ -7,6 +7,6 @@ compiler:
 script:
   - mkdir build
   - cd build && cmake ..
-  - cmake --build .
+  - cmake --build . -G "Ninja"
   - test/tfun-test
 
