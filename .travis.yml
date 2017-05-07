@@ -1,3 +1,13 @@
+dist: trusty
+sudo: false
+
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - cmake
+
 language: cpp
 
 compiler:
