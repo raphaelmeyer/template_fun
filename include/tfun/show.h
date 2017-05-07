@@ -2,20 +2,16 @@
 
 #include <tfun/list.h>
 
-#include <string>
 #include <sstream>
+#include <string>
 
 template <typename> struct show_;
 
-template <>
-struct show_<list<>>
-{
+template <> struct show_<list<>> {
   static std::string string() { return ""; }
 };
 
-template<int X>
-struct show_<list<X>>
-{
+template <int X> struct show_<list<X>> {
   static std::string string() {
     std::stringstream stream;
     stream << X;
@@ -23,9 +19,7 @@ struct show_<list<X>>
   }
 };
 
-template <int X, int... Xs>
-struct show_<list<X, Xs...>>
-{
+template <int X, int... Xs> struct show_<list<X, Xs...>> {
   static std::string string() {
     std::stringstream stream;
     stream << X << ", " << show_<list<Xs...>>::string();
@@ -33,11 +27,8 @@ struct show_<list<X, Xs...>>
   }
 };
 
-template <typename Xs>
-struct show
-{
-  static std::string string()
-  {
+template <typename Xs> struct show {
+  static std::string string() {
     std::stringstream stream;
     stream << "[" << show_<Xs>::string() << "]";
     return stream.str();
