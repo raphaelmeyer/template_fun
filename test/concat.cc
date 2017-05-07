@@ -1,6 +1,7 @@
 #include <gmock/gmock.h>
 
-#include <tfun/tfun.h>
+#include <tfun/concat.h>
+#include <tfun/show.h>
 
 using namespace ::testing;
 
