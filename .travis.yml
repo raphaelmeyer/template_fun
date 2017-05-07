@@ -7,6 +7,7 @@ addons:
       - ubuntu-toolchain-r-test
     packages:
       - cmake
+      - gcc-6
 
 language: cpp
 
