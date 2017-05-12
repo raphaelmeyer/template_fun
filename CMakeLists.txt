@@ -11,3 +11,7 @@ add_library(${LIBNAME} INTERFACE)
 target_include_directories(${LIBNAME} INTERFACE include)
 
 add_subdirectory(test)
+
+add_custom_target(run-tests ALL
+  DEPENDS run-tfun-test)
+
