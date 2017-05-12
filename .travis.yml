@@ -29,9 +29,5 @@ before_script:
   - export CXX=${CXX_COMPILER}
 
 script:
-  - mkdir -p build
-  - cd build
-  - cmake ..
-  - cmake --build .
-  - test/tfun-test
+  - ./build.sh
 
