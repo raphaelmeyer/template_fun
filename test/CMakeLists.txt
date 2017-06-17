@@ -3,6 +3,7 @@ set(TESTNAME tfun-test)
 add_executable(${TESTNAME}
   concat.cc
   filter.cc
+  fold.cc
   map.cc
   quicksort.cc
   show.cc
